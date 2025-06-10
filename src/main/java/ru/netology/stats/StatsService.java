@@ -2,19 +2,30 @@ package ru.netology.stats;
 
 
 public class StatsService {
-    long[] arrSales = new long[12];
+
 
     //1 - найти сумму всех продаж
     public long calculateTheTotalSum(long[] arrSales) {
-        long sales = arrSales[0] + arrSales[1] + arrSales[2] + arrSales[3] + arrSales[4] + arrSales[5] + arrSales[6] + arrSales[7] + arrSales[8] + arrSales[9] + arrSales[10] + arrSales[11];
-        return sales;
+        long sum = 0;
+        for (long value : arrSales) {
+            sum += value;
     }
+    return sum;
+}
 
-    //2 - найти среднюю сумму продаж в месяц;
+
+
+//2 - найти среднюю сумму продаж в месяц;
     public long calculateTheAverageSum(long[] arrSales) {
-        long averageSales = (arrSales[0] + arrSales[1] + arrSales[2] + arrSales[3] + arrSales[4] + arrSales[5] + arrSales[6] + arrSales[7] + arrSales[8] + arrSales[9] + arrSales[10] + arrSales[11]) / 12;
+        long sum = 0;
+        for (long value : arrSales) {
+            sum += value;
+        }
+       long averageSales = sum / arrSales.length;
         return averageSales;
     }
+
+
 
     //3 - найти номер месяца, в котором был пик продаж, то есть осуществлены продажи на максимальную сумму*;
     public int findMaxSalesMonth(long[] maxSales) {
