@@ -5,7 +5,6 @@ import org.junit.jupiter.api.Test;
 
 public class StatsServiceTest {
 
-
     //1
     @Test
     public void shouldcalculateTheSum() {

@@ -14,10 +14,18 @@ public class StatsService {
 }
 
 
-
 //2 - найти среднюю сумму продаж в месяц;
+    //сумму мы берем из первого метода
     public long calculateTheAverageSum(long[] arrSales) {
-        long sum = 0;
+            long sum = calculateTheTotalSum(arrSales);
+            long averageSales = sum / arrSales.length;
+            return averageSales;
+        }
+        
+
+      /*  решение тоже работает, но сумму мы прописываем заново, а не из первого метода!!!
+      long sum = 0;
+
         for (long value : arrSales) {
             sum += value;
         }
@@ -25,7 +33,7 @@ public class StatsService {
         return averageSales;
     }
 
-
+*/
 
     //3 - найти номер месяца, в котором был пик продаж, то есть осуществлены продажи на максимальную сумму*;
     public int findMaxSalesMonth(long[] maxSales) {
