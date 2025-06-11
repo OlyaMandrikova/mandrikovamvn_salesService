@@ -9,18 +9,18 @@ public class StatsService {
         long sum = 0;
         for (long value : arrSales) {
             sum += value;
+        }
+        return sum;
     }
-    return sum;
-}
 
 
-//2 - найти среднюю сумму продаж в месяц;
+    //2 - найти среднюю сумму продаж в месяц;
     //сумму мы берем из первого метода
     public long calculateTheAverageSum(long[] arrSales) {
-            long sum = calculateTheTotalSum(arrSales);
-            long averageSales = sum / arrSales.length;
-            return averageSales;
-        }
+        long sum = calculateTheTotalSum(arrSales);
+        long averageSales = sum / arrSales.length;
+        return averageSales;
+    }
         
 
       /*  решение тоже работает, но сумму мы прописываем заново, а не из первого метода!!!
