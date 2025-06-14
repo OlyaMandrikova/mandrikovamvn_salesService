@@ -64,11 +64,11 @@ public class StatsService {
 
     //5 Найти количество месяцев, в которых продажи были ниже среднего (см. п.2);
 
-    public int monthCounterSumLowerAverage(long[] sales) {
+    public int monthCounterSumLowerAverage(long[] arrSales) {
         int count = 0; // счётчик месяцев, удовлетворяющих условию
-        long averageSales = (sales[0] + sales[1] + sales[2] + sales[3] + sales[4] + sales[5] + sales[6] + sales[7] + sales[8] + sales[9] + sales[10] + sales[11]) / 12;
-        for (int month = 0; month < sales.length; month++) {
-            if (sales[month] < averageSales) {
+        long averageSales = calculateTheAverageSum(arrSales);
+        for (int month = 0; month < arrSales.length; month++) {
+            if (arrSales[month] < averageSales) {
                 count++; // увеличиваем счётчик месяцев, удовлетворяющих условию
             } // System.out.println("Количество месяцев, меньше среднего месячного дохода - " + count);
         }
@@ -77,11 +77,11 @@ public class StatsService {
 
 
     //6 Найти количество месяцев, в которых продажи были выше среднего (см. п.2).
-    public int monthCounterSumAboveAverage(long[] sales) {
+    public int monthCounterSumAboveAverage(long[] arrSales) {
         int count = 0; // счётчик месяцев, удовлетворяющих условию
-        long averageSales = (sales[0] + sales[1] + sales[2] + sales[3] + sales[4] + sales[5] + sales[6] + sales[7] + sales[8] + sales[9] + sales[10] + sales[11]) / 12;
-        for (int month = 0; month < sales.length; month++) {
-            if (sales[month] > averageSales) {
+        long averageSales = calculateTheAverageSum(arrSales);
+        for (int month = 0; month < arrSales.length; month++) {
+            if (arrSales[month] > averageSales) {
                 count++; // увеличиваем счётчик месяцев, удовлетворяющих условию
             } // System.out.println("Количество месяцев, больше среднего месячного дохода - " + count);
         }

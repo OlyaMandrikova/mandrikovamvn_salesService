@@ -9,19 +9,7 @@ public class StatsServiceTest {
     @Test
     public void shouldcalculateTheSum() {
         StatsService service = new StatsService();
-        long[] arrSales = new long[12];
-        arrSales[0] = 8;
-        arrSales[1] = 15;
-        arrSales[2] = 13;
-        arrSales[3] = 15;
-        arrSales[4] = 17;
-        arrSales[5] = 20;
-        arrSales[6] = 19;
-        arrSales[7] = 20;
-        arrSales[8] = 7;
-        arrSales[9] = 14;
-        arrSales[10] = 14;
-        arrSales[11] = 18;
+        long[] arrSales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expectedSum = 180;
         long actualSum = service.calculateTheTotalSum(arrSales);
         Assertions.assertEquals(expectedSum, actualSum);
@@ -32,19 +20,7 @@ public class StatsServiceTest {
     @Test
     public void shouldcalculateTheAverageSum() {
         StatsService service = new StatsService();
-        long[] arrSales = new long[12];
-        arrSales[0] = 8;
-        arrSales[1] = 15;
-        arrSales[2] = 13;
-        arrSales[3] = 15;
-        arrSales[4] = 17;
-        arrSales[5] = 20;
-        arrSales[6] = 19;
-        arrSales[7] = 20;
-        arrSales[8] = 7;
-        arrSales[9] = 14;
-        arrSales[10] = 14;
-        arrSales[11] = 18;
+        long[] arrSales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expectedSum = 15;
         long actualSum = service.calculateTheAverageSum(arrSales);
         Assertions.assertEquals(expectedSum, actualSum);
@@ -57,7 +33,6 @@ public class StatsServiceTest {
 
     public void shouldFindTheMaxMonth() {
         StatsService service = new StatsService();
-
         long[] maxSales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expectedNum = 8;
         long actualNum = service.findMaxSalesMonth(maxSales);
@@ -82,9 +57,9 @@ public class StatsServiceTest {
     @Test
     public void shouldFindTheAmountOfMonthLowerTheAverage() {
         StatsService service = new StatsService();
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] arrSales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expectedAmount = 5;
-        long actualAmount = service.monthCounterSumLowerAverage(sales);
+        long actualAmount = service.monthCounterSumLowerAverage(arrSales);
         Assertions.assertEquals(expectedAmount, actualAmount);
     }
 
@@ -93,9 +68,9 @@ public class StatsServiceTest {
     @Test
     public void shouldFindTheAmountOfMonthHigherTheAverage() {
         StatsService service = new StatsService();
-        long[] sales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
+        long[] arrSales = {8, 15, 13, 15, 17, 20, 19, 20, 7, 14, 14, 18};
         long expectedAmount = 5;
-        long actualAmount = service.monthCounterSumLowerAverage(sales);
+        long actualAmount = service.monthCounterSumLowerAverage(arrSales);
         Assertions.assertEquals(expectedAmount, actualAmount);
     }
 
